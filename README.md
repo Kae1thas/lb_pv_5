@@ -45,8 +45,9 @@
 ```bash
 # Генерация SPD-данных
 python3 generate_data.py
-# Бенчмарки (5 запусков)
-python3 benchmark.py
+# Запуск основы 
+mpiexec -n 1/4/9/16 --oversubcribe python3 cg_2d.py
+mpiexec -n 1/4/9/16 --oversubcribe python3 matvec_2d.py
 # Графики
 python3 plot_results.py
 ```
@@ -59,7 +60,7 @@ python3 plot_results.py
 ### 4.2. Методика измерений
 - Оборудование: WSL2, Ubuntu, Ryzen 5 4600H, DDR4 16 ГБ RAM.
 - MPI: OpenMPI 4.1.5.
-- Запуски: 5 раз на p=1,4,9,16 (сильная масштабируемость, фиксированный N,M).
+- Запуски: 4 раз на p=1,4,9,16 (сильная масштабируемость, фиксированный N,M).
 - Сравнение: С ЛР3 (1D базовый и оптимизированный с Scatterv).
 - Измерение: Время от Bcast(N,M) до Gatherv(x).
 
@@ -153,7 +154,6 @@ Split/Create/Free: 5–15% init (O(p) вызовов). Фрагментация 
 - [generate_data.py](generate_data.py) — SPD-данные.
 - [matvec_2d.py](matvec_2d.py) — 2D-умножение.
 - [cg_2d.py](cg_2d.py) — МСГ с 2D.
-- [benchmark.py](benchmark.py) — Замеры.
 - [plot_results.py](plot_results.py) — Графики.
 
 ### 9.2. Используемые библиотеки и версии
