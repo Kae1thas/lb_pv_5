@@ -1,0 +1,21 @@
+         90 function calls in 0.215 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.006    0.006    0.215    0.215 /mnt/c/users/oleg/desktop/lb_pv_13/base_matrix_vector.py:14(matrix_vector_multiply)
+       15    0.104    0.007    0.104    0.007 {method 'Send' of 'mpi4py.MPI.Comm' objects}
+       15    0.084    0.006    0.084    0.006 {method 'Recv' of 'mpi4py.MPI.Comm' objects}
+        2    0.019    0.010    0.019    0.010 {method 'rand' of 'numpy.random.mtrand.RandomState' objects}
+        1    0.001    0.001    0.001    0.001 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
+       16    0.000    0.000    0.000    0.000 {built-in method numpy.empty}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3/dist-packages/numpy/core/numeric.py:1851(_frombuffer)
+       32    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {built-in method numpy.frombuffer}
+        2    0.000    0.000    0.000    0.000 {built-in method time.time}
+        1    0.000    0.000    0.000    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3/dist-packages/numpy/core/__init__.py:145(_DType_reduce)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3/dist-packages/numpy/core/multiarray.py:741(dot)
+
+
